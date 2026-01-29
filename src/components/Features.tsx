@@ -98,40 +98,6 @@ const Features: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Card 2: Agile Workflow AI */}
-                    <div className="bg-[#FFF8F4] rounded-3xl p-8 col-span-1 transition-transform hover:scale-[1.01] duration-300">
-                        <div className="flex flex-col h-full justify-between">
-                            <div className="mb-6">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <span className="w-2 h-2 rounded-full bg-orange-400"></span>
-                                    <span className="text-xs text-orange-500 font-medium uppercase tracking-wider">Productivity</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-[#141414] mb-2 font-poppins">Agile Workflow AI</h3>
-                                <p className="text-[#a4adbf] text-sm">Streamline candidate flow with automated stages.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Card 3: New Feature */}
-                    <div className="bg-white border border-gray-100 rounded-3xl p-8 col-span-1 shadow-sm transition-transform hover:scale-[1.01] duration-300">
-                        <div className="flex flex-col h-full justify-between">
-                            {/* Mock Graph */}
-                            <div className="flex items-end gap-1 h-20 mb-6">
-                                <div className="w-1/5 bg-blue-100 h-[40%] rounded-t"></div>
-                                <div className="w-1/5 bg-blue-200 h-[60%] rounded-t"></div>
-                                <div className="w-1/5 bg-blue-300 h-[30%] rounded-t"></div>
-                                <div className="w-1/5 bg-blue-400 h-[80%] rounded-t"></div>
-                                <div className="w-1/5 bg-blue-500 h-[50%] rounded-t"></div>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-[#141414] mb-2 font-poppins">Data Insights</h3>
-                                <p className="text-[#a4adbf] text-sm">Real-time analytics to track your hiring pipeline.</p>
-                            </div>
-                        </div>
-                    </div>
-
                     {/* Card 4: Ask Vasitum AI (Wide) */}
                     <div className="bg-white rounded-3xl p-5 col-span-1 lg:col-span-2 flex flex-col md:flex-row items-center gap-8 transition-transform hover:scale-[1.01] duration-300 border-t border-r border-b border-t-[#FAD7A6] border-r-[#F4A940] border-b-[#F4A940] shadow-[0px_6px_24px_0px_rgba(0,0,0,0.08)] relative overflow-hidden">
                         <div className="flex-1 z-10">
@@ -173,6 +139,40 @@ const Features: React.FC = () => {
                                     <div className="h-[19px] w-[51px] bg-[#f3f4f6] rounded-full animate-pulse"></div>
                                     <div className="h-[19px] flex-1 bg-[#f3f4f6] rounded-full animate-pulse delay-75"></div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Card 2: Agile Workflow AI - Moved down */}
+                    <div className="bg-[#FFF8F4] rounded-3xl p-8 col-span-1 transition-transform hover:scale-[1.01] duration-300">
+                        <div className="flex flex-col h-full justify-between">
+                            <div className="mb-6">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <span className="w-2 h-2 rounded-full bg-orange-400"></span>
+                                    <span className="text-xs text-orange-500 font-medium uppercase tracking-wider">Productivity</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-[#141414] mb-2 font-poppins">Agile Workflow AI</h3>
+                                <p className="text-[#a4adbf] text-sm">Streamline candidate flow with automated stages.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Card 3: Data Insights - Moved down */}
+                    <div className="bg-white border border-gray-100 rounded-3xl p-8 col-span-1 shadow-sm transition-transform hover:scale-[1.01] duration-300">
+                        <div className="flex flex-col h-full justify-between">
+                            {/* Mock Graph */}
+                            <div className="flex items-end gap-1 h-20 mb-6">
+                                <div className="w-1/5 bg-blue-100 h-[40%] rounded-t"></div>
+                                <div className="w-1/5 bg-blue-200 h-[60%] rounded-t"></div>
+                                <div className="w-1/5 bg-blue-300 h-[30%] rounded-t"></div>
+                                <div className="w-1/5 bg-blue-400 h-[80%] rounded-t"></div>
+                                <div className="w-1/5 bg-blue-500 h-[50%] rounded-t"></div>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-[#141414] mb-2 font-poppins">Data Insights</h3>
+                                <p className="text-[#a4adbf] text-sm">Real-time analytics to track your hiring pipeline.</p>
                             </div>
                         </div>
                     </div>
