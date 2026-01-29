@@ -1,7 +1,6 @@
 import React from 'react';
 
-const logoIcon = "http://localhost:3845/assets/b0ff52d2ab848897def311906f21921e523ac4c3.svg";
-const logoText = "http://localhost:3845/assets/7135ea04079f2d31043a325d0992852a87450c41.svg";
+import BrandIcon from "../../public/brand_Icon.svg";
 
 const Navbar: React.FC = () => {
     return (
@@ -9,11 +8,8 @@ const Navbar: React.FC = () => {
             <div className="w-[980px] backdrop-blur-[5px] bg-[rgba(255,255,255,0.1)] border border-white flex justify-between items-center px-[45px] py-[10px] rounded-[20px] shadow-sm">
                 {/* Logo/Horizontal Mark */}
                 <div className="relative h-[23px] w-[89px]">
-                    <div className="absolute top-0 left-0 w-[23px] h-[23px]">
-                        <img src={logoIcon} alt="Logo Icon" className="w-full h-full" />
-                    </div>
-                    <div className="absolute top-[5px] left-[29px] w-[60px] h-[12px]"> {/* Adjusted based on design percentage inset */}
-                        <img src={logoText} alt="Logo Text" className="w-full h-full" />
+                    <div className="absolute top-0 left-0 w-full h-full">
+                        <img src={BrandIcon} alt="Logo Icon" className="w-full h-full" />
                     </div>
                 </div>
 
