@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BrandIcon from "../../public/brand_Icon.svg";
+const BrandIcon = "/brand_Icon.svg";
 
 const Navbar: React.FC = () => {
     return (

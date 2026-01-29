@@ -1,6 +1,6 @@
 import React from 'react';
-import whiteIcon from "../../public/white-logo.svg";
-import vasitumBottom from "../../public/vasi.svg"
+const whiteIcon = "/white-logo.svg";
+const vasitumBottom = "/vasi.svg";
 
 const Footer: React.FC = () => {
     return (
