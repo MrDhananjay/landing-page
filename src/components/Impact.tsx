@@ -50,22 +50,23 @@ const BrandHandCrafted = () => <span className="font-['Georgia'] italic text-[14
 interface BrandStripProps {
     brands: React.ComponentType[];
     speed?: string;
-    reverse?: boolean;
+    delay?: string;
 }
 
-const BrandStrip: React.FC<BrandStripProps> = ({ brands, speed = "15s", reverse = false }) => {
+const BrandStrip: React.FC<BrandStripProps> = ({ brands, speed = "15s", delay = "0s" }) => {
     return (
-        <div className="h-[242px] overflow-hidden border-r border-[#E5E7EB] last:border-r-0 relative bg-white">
+        <div className="h-[121px] overflow-hidden border-r border-[#E5E7EB] last:border-r-0 relative bg-white">
             <div
                 className="flex flex-col"
                 style={{
-                    animation: `vertical-marquee ${speed} linear infinite`,
-                    animationDirection: reverse ? 'reverse' : 'normal'
+                    animation: `vertical-step ${speed} linear infinite`,
+                    animationDirection: 'normal',
+                    animationDelay: delay
                 }}
             >
                 {/* Triple the list to ensure seamless looping */}
                 {[...brands, ...brands, ...brands].map((Brand, idx) => (
-                    <div key={idx} className="h-[121px] flex items-center justify-center px-4 border-b border-[#E5E7EB]">
+                    <div key={idx} className="h-[121px] flex items-center justify-center px-4">
                         <Brand />
                     </div>
                 ))}
@@ -79,9 +80,11 @@ const Impact: React.FC = () => {
         <section className="w-full bg-white relative overflow-hidden">
             <style>
                 {`
-                @keyframes vertical-marquee {
-                    0% { transform: translateY(0); }
-                    100% { transform: translateY(-33.333%); }
+                @keyframes vertical-step {
+                    0%, 25% { transform: translateY(0); }
+                    33.33%, 58.33% { transform: translateY(-11.11%); }
+                    66.66%, 91.66% { transform: translateY(-22.22%); }
+                    100% { transform: translateY(-33.33%); }
                 }
                 `}
             </style>
@@ -214,21 +217,23 @@ const Impact: React.FC = () => {
                     <div className="grid grid-cols-4 bg-white">
                         <BrandStrip
                             brands={[BrandReverland, BrandCopixel, BrandLiva]}
-                            speed="12s"
+                            speed="9s"
+                            delay="0s"
                         />
                         <BrandStrip
                             brands={[BrandLiva, BrandFashion, BrandAlpha]}
-                            speed="18s"
-                            reverse
+                            speed="9s"
+                            delay="0.8s"
                         />
                         <BrandStrip
                             brands={[BrandPure, BrandAlpha, BrandHandCrafted]}
-                            speed="15s"
+                            speed="9s"
+                            delay="1.6s"
                         />
                         <BrandStrip
                             brands={[BrandAven, BrandHandCrafted, BrandReverland]}
-                            speed="20s"
-                            reverse
+                            speed="9s"
+                            delay="2.4s"
                         />
                     </div>
                 </div>
