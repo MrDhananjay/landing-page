@@ -55,7 +55,7 @@ interface BrandStripProps {
 
 const BrandStrip: React.FC<BrandStripProps> = ({ brands, speed = "15s", reverse = false }) => {
     return (
-        <div className="h-[121px] overflow-hidden border-r border-[#E5E7EB] last:border-r-0 relative bg-white">
+        <div className="h-[242px] overflow-hidden border-r border-[#E5E7EB] last:border-r-0 relative bg-white">
             <div
                 className="flex flex-col"
                 style={{
@@ -65,7 +65,7 @@ const BrandStrip: React.FC<BrandStripProps> = ({ brands, speed = "15s", reverse 
             >
                 {/* Triple the list to ensure seamless looping */}
                 {[...brands, ...brands, ...brands].map((Brand, idx) => (
-                    <div key={idx} className="h-[121px] flex items-center justify-center px-4">
+                    <div key={idx} className="h-[121px] flex items-center justify-center px-4 border-b border-[#E5E7EB]">
                         <Brand />
                     </div>
                 ))}
@@ -87,17 +87,16 @@ const Impact: React.FC = () => {
             </style>
             {/* Stats Section */}
             <div className="relative px-[166px] py-[113px]">
-                {/* Background Watermark Text */}
-                <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-                    <p className="absolute left-[-16px] top-0 font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)]">
-                        IMPACT
-                    </p>
-                    <p className="absolute left-[430px] top-[473px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)]">
-                        GROWTH
-                    </p>
-                </div>
-
                 <div className="relative z-10 w-[980px] mx-auto">
+                    {/* Background Watermark Text - positioned relative to content */}
+                    <div className="absolute inset-0 pointer-events-none select-none overflow-visible -z-10">
+                        <p className="absolute left-[-246px] top-[-113px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)] whitespace-nowrap">
+                            IMPACT
+                        </p>
+                        <p className="absolute left-[200px] top-[360px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)] whitespace-nowrap">
+                            GROWTH
+                        </p>
+                    </div>
                     {/* Header */}
                     <div className="flex justify-between items-start mb-[63px]">
                         <h2 className="text-[42px] font-poppins text-[#212D39] leading-[48px] tracking-[-3.35px] w-[287px]">
