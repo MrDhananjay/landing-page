@@ -29,7 +29,7 @@ const Impact: React.FC = () => {
                     <p className="absolute left-[-16px] top-0 font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)]">
                         IMPACT
                     </p>
-                    <p className="absolute left-[170px] top-[473px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)]">
+                    <p className="absolute left-[430px] top-[473px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)]">
                         GROWTH
                     </p>
                 </div>
