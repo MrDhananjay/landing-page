@@ -6,7 +6,7 @@ import {
     NewCandidatesBadge,
 } from './FloatingElements';
 import vasiRec from '../assets/vasi-rec.svg';
-import container from '../assets/container.svg';
+import container from '../assets/Container.svg';
 
 
 const Recruitment: React.FC = () => {
