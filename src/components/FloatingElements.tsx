@@ -12,9 +12,6 @@ const CheckIcon = () => (
 );
 
 
-
-// --- Components ---
-
 // 1. Resume Parsed Toast (Small) - Node 351-928
 export const ResumeToastSmall: React.FC = () => {
     return (
