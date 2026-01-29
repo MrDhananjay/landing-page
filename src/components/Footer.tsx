@@ -1,4 +1,6 @@
 import React from 'react';
+import whiteIcon from "../../public/white-logo.svg";
+import vasitumBottom from "../../public/vasi.svg"
 
 const Footer: React.FC = () => {
     return (
@@ -10,15 +12,7 @@ const Footer: React.FC = () => {
                     <div className="w-[169px] flex-shrink-0 relative">
                         <div className="flex items-center gap-2 px-4 py-2">
                             {/* Logo Icon */}
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="8" fill="white" />
-                                <path d="M10 10H14V14H10V10Z" fill="#072251" />
-                                <path d="M10 18H14V22H10V18Z" fill="#072251" />
-                                <path d="M18 10H22V14H18V10Z" fill="#072251" />
-                                <path d="M18 18H22V22H18V18Z" fill="#072251" />
-                                <path d="M14 14H18V18H14V14Z" fill="#072251" />
-                            </svg>
-                            <span className="text-white font-poppins font-semibold text-[20px]">Vasitum</span>
+                            <img src={whiteIcon} alt="Logo Icon" className="w-full h-full" />
                         </div>
                         {/* Vertical separator line */}
                         <div className="absolute right-[-3px] top-0 w-px h-[225px] bg-[#1B4178]" />
@@ -77,23 +71,8 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Large Watermark Text - positioned at bottom */}
-            <div className="w-[1270px] mx-auto h-[159px] mb-[-50px] relative z-0">
-                <svg width="1270" height="159" viewBox="0 0 1270 159" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                    <text
-                        x="635"
-                        y="130"
-                        textAnchor="middle"
-                        fontFamily="Poppins, sans-serif"
-                        fontWeight="700"
-                        fontSize="160"
-                        fill="none"
-                        stroke="rgba(27, 65, 120, 0.25)"
-                        strokeWidth="1.5"
-                        letterSpacing="-4"
-                    >
-                        Vasitum
-                    </text>
-                </svg>
+            <div className="w-full mb-[-1px] relative z-0">
+                <img src={vasitumBottom} alt="Vasitum Watermark" className="w-full h-auto" />
             </div>
         </footer>
     );

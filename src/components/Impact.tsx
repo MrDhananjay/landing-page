@@ -19,9 +19,72 @@ const ChartIcon = () => (
     </svg>
 );
 
+// Brand Components
+const BrandReverland = () => <span className="font-['Georgia'] italic text-[24px] text-[#212D39]">reverland</span>;
+const BrandLiva = () => (
+    <div className="flex items-center gap-2">
+        <div className="w-[18px] h-[18px] bg-[#212D39] rounded-[4px]" />
+        <span className="font-['Inter'] font-medium text-[20px] text-[#212D39]">liva</span>
+    </div>
+);
+const BrandPure = () => <span className="font-['Georgia'] italic text-[24px] text-[#212D39]">pure</span>;
+const BrandAven = () => <span className="font-['Inter'] font-bold text-[20px] text-[#212D39]">aven.</span>;
+const BrandCopixel = () => (
+    <div className="flex items-center gap-2">
+        <div className="flex gap-0.5">
+            <div className="w-[4px] h-[16px] bg-[#212D39]" />
+            <div className="w-[4px] h-[12px] bg-[#212D39] mt-1" />
+        </div>
+        <span className="font-['Inter'] font-bold text-[16px] text-[#212D39]">copixel</span>
+    </div>
+);
+const BrandFashion = () => (
+    <div className="flex flex-col items-center">
+        <span className="font-['Georgia'] italic text-[20px] text-[#212D39]">fashion</span>
+        <span className="font-['Inter'] text-[10px] tracking-[3px] text-[#212D39] uppercase">LIVE</span>
+    </div>
+);
+const BrandAlpha = () => <span className="font-['Inter'] font-bold text-[16px] text-[#212D39] tracking-[2px]">ALPHA</span>;
+const BrandHandCrafted = () => <span className="font-['Georgia'] italic text-[14px] text-[#212D39] border border-[#212D39] px-4 py-1 rounded-full whitespace-nowrap">Hand Crafted</span>;
+
+interface BrandStripProps {
+    brands: React.ComponentType[];
+    speed?: string;
+    reverse?: boolean;
+}
+
+const BrandStrip: React.FC<BrandStripProps> = ({ brands, speed = "15s", reverse = false }) => {
+    return (
+        <div className="h-[121px] overflow-hidden border-r border-[#E5E7EB] last:border-r-0 relative bg-white">
+            <div
+                className="flex flex-col"
+                style={{
+                    animation: `vertical-marquee ${speed} linear infinite`,
+                    animationDirection: reverse ? 'reverse' : 'normal'
+                }}
+            >
+                {/* Triple the list to ensure seamless looping */}
+                {[...brands, ...brands, ...brands].map((Brand, idx) => (
+                    <div key={idx} className="h-[121px] flex items-center justify-center px-4">
+                        <Brand />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 const Impact: React.FC = () => {
     return (
         <section className="w-full bg-white relative overflow-hidden">
+            <style>
+                {`
+                @keyframes vertical-marquee {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-33.333%); }
+                }
+                `}
+            </style>
             {/* Stats Section */}
             <div className="relative px-[166px] py-[113px]">
                 {/* Background Watermark Text */}
@@ -148,43 +211,26 @@ const Impact: React.FC = () => {
 
             {/* Logo Grid Section */}
             <div className="w-full px-[166px] py-[60px]">
-                <div className="w-[980px] mx-auto">
-                    {/* Row 1 */}
-                    <div className="grid grid-cols-4 border-t border-l border-[#E5E7EB]">
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex items-center justify-center">
-                            <span className="font-['Georgia'] italic text-[24px] text-[#212D39]">reverland</span>
-                        </div>
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex items-center justify-center gap-2">
-                            <div className="w-[18px] h-[18px] bg-[#212D39] rounded-[4px]" />
-                            <span className="font-['Inter'] font-medium text-[20px] text-[#212D39]">liva</span>
-                        </div>
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex items-center justify-center">
-                            <span className="font-['Georgia'] italic text-[24px] text-[#212D39]">pure</span>
-                        </div>
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex items-center justify-center">
-                            <span className="font-['Inter'] font-bold text-[20px] text-[#212D39]">aven.</span>
-                        </div>
-                    </div>
-
-                    {/* Row 2 */}
-                    <div className="grid grid-cols-4 border-l border-[#E5E7EB]">
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex items-center justify-center gap-2">
-                            <div className="flex gap-0.5">
-                                <div className="w-[4px] h-[16px] bg-[#212D39]" />
-                                <div className="w-[4px] h-[12px] bg-[#212D39] mt-1" />
-                            </div>
-                            <span className="font-['Inter'] font-bold text-[16px] text-[#212D39]">copixel</span>
-                        </div>
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex flex-col items-center justify-center">
-                            <span className="font-['Georgia'] italic text-[20px] text-[#212D39]">fashion</span>
-                            <span className="font-['Inter'] text-[10px] tracking-[3px] text-[#212D39] uppercase">LIVE</span>
-                        </div>
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex items-center justify-center">
-                            <span className="font-['Inter'] font-bold text-[16px] text-[#212D39] tracking-[2px]">ALPHA</span>
-                        </div>
-                        <div className="h-[121px] border-r border-b border-[#E5E7EB] flex items-center justify-center">
-                            <span className="font-['Georgia'] italic text-[14px] text-[#212D39] border border-[#212D39] px-4 py-1 rounded-full">Hand Crafted</span>
-                        </div>
+                <div className="w-[980px] mx-auto overflow-hidden rounded-xl border border-[#E5E7EB]">
+                    <div className="grid grid-cols-4 bg-white">
+                        <BrandStrip
+                            brands={[BrandReverland, BrandCopixel, BrandLiva]}
+                            speed="12s"
+                        />
+                        <BrandStrip
+                            brands={[BrandLiva, BrandFashion, BrandAlpha]}
+                            speed="18s"
+                            reverse
+                        />
+                        <BrandStrip
+                            brands={[BrandPure, BrandAlpha, BrandHandCrafted]}
+                            speed="15s"
+                        />
+                        <BrandStrip
+                            brands={[BrandAven, BrandHandCrafted, BrandReverland]}
+                            speed="20s"
+                            reverse
+                        />
                     </div>
                 </div>
             </div>

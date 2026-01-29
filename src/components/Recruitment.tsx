@@ -51,7 +51,7 @@ const Recruitment: React.FC = () => {
                         <div className="absolute right-0 top-0 w-[576px] h-[713px] bg-[#1B2A4E] rounded-tl-[60px] rounded-bl-[60px] shadow-[-7px_0px_24px_0px_rgba(2,14,35,0.12)]"></div>
 
                         {/* Blur Effect (Lens) */}
-                        <div className="absolute right-[-50px] top-[184px] w-[338px] h-[345px] bg-[#1F449D] blur-[64px] rounded-full opacity-60 pointer-events-none"></div>
+                        <div className="absolute right-[-15px] top-[184px] w-[338px] h-[345px] bg-[#1F449D] blur-[64px] rounded-full opacity-60 pointer-events-none"></div>
 
                         {/* Floating Card: Michael Foster */}
                         <div className="absolute left-[30px] top-[100px] bg-white p-[13px] rounded-[13px] shadow-[0px_16px_20px_-4px_rgba(57,60,70,0.1),0px_6px_8px_-4px_rgba(57,60,70,0.1)] w-[250px] z-10">
