@@ -11,17 +11,7 @@ const CheckIcon = () => (
     </svg>
 );
 
-const AIStarsIcon = () => (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="url(#paint0_linear)" />
-        <defs>
-            <linearGradient id="paint0_linear" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#9C27B0" />
-                <stop offset="1" stopColor="#F4A940" />
-            </linearGradient>
-        </defs>
-    </svg>
-);
+
 
 // --- Components ---
 
