@@ -154,16 +154,3 @@ export const NewCandidatesBadge: React.FC = () => {
     );
 };
 
-// 6. Floating Icon/Button - Node 351-1323
-export const FloatingIconButton: React.FC = () => {
-    return (
-        <button className="group bg-[#0b5cd5] flex items-center justify-center p-[12px] relative rounded-[35px] shadow-[0px_-1px_16px_0px_rgba(0,0,0,0.4)] w-[70px] h-[70px] hover:scale-105 transition-transform">
-            <div className="bg-[#0b5cd5] border-[0.3px] border-white flex items-center justify-center p-[10px] relative rounded-[23px] shadow-[0px_0px_2px_0px_rgba(15,23,43,0.2)] w-full h-full">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                    <path d="M12 4V20M4 12H20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            </div>
-        </button>
-    );
-};
-
