@@ -17,15 +17,17 @@ const Hero: React.FC = () => {
             {/* Background Gradients (Abstract) */}
             {/* Background Gradients (Group 427320765) */}
             {/* Background Gradients (Group 427320765) */}
-            <div className="absolute top-0 left-0 w-full h-[800px] pointer-events-none z-0 overflow-hidden">
-                {/* Ellipse 2054 (Left - Orange) */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-[606px] pointer-events-none z-0">
+               <img className="w-full h-full object-cover no-repeat" src="/gradient.svg" alt="Gradient" />
+
+                {/* Ellipse 2054 (Left - Orange)
                 <div className="absolute top-[-166px] left-[-10%] w-[50%] h-[360px] bg-[#F4A940] rounded-full blur-[100px] mix-blend-screen opacity-60" />
 
-                {/* Ellipse 2055 (Center - Cyan) - Swapped with Blue */}
+              
                 <div className="absolute top-[-186px] left-1/2 -translate-x-1/2 w-[50%] h-[389px] bg-[#83FFFF] rounded-full blur-[100px] opacity-60" />
 
-                {/* Ellipse 2056 (Right - Blue) - Swapped with Cyan */}
-                <div className="absolute top-[-180px] right-[-10%] w-[50%] h-[360px] bg-[#0066FF] rounded-full blur-[100px] opacity-60" />
+               
+                <div className="absolute top-[-180px] right-[-10%] w-[50%] h-[360px] bg-[#0066FF] rounded-full blur-[100px] opacity-60" /> */}
             </div>
 
 
