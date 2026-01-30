@@ -50,7 +50,17 @@ const Features: React.FC = () => {
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Card 1: Automated Screening (Tall) */}
-                    <GsapScrollReveal className="col-span-1 lg:row-span-2 h-full" delay={0.1}>
+                    <GsapScrollReveal className="col-span-1 lg:row-span-2 h-full relative" delay={0.1}>
+                        {/* Background Line SVG - Left */}
+                        <div
+                            className="absolute left-[-10px] top-0 h-full w-[1px] pointer-events-none select-none"
+                            style={{ zIndex: -1, background: 'linear-gradient(to bottom, #6FA8FF, white)' }}
+                        />
+                        {/* Background Line SVG - Right (between cards) */}
+                        <div
+                            className="absolute right-[-10px] top-0 h-full w-[1px] pointer-events-none select-none"
+                            style={{ zIndex: -1, background: 'linear-gradient(to bottom, #6FA8FF, white)' }}
+                        />
                         <div className="bg-gradient-to-b from-[rgba(238,242,255,0.5)] to-white rounded-3xl p-8 h-full transition-transform hover:scale-[1.01] duration-300 border border-transparent hover:border-gray-100 relative overflow-hidden">
                             {/* Animated Border Layer */}
                             <div className={getBorderClass(0)} style={{ '--start-offset': '270deg' } as React.CSSProperties}></div>
@@ -121,7 +131,7 @@ const Features: React.FC = () => {
                     </GsapScrollReveal>
 
                     {/* Card 4: Ask Vasitum AI (Wide) */}
-                    <GsapScrollReveal className="col-span-1 lg:col-span-2" delay={0.2}>
+                    <GsapScrollReveal className="col-span-1 lg:col-span-2 relative" delay={0.2}>
                         <div className="bg-white group rounded-3xl p-5 w-full h-full flex flex-col md:flex-row items-center gap-8 transition-transform hover:scale-[1.01] duration-300 border-r border-b border-transparent hover:border-r-[#F4A940] hover:border-b-[#F4A940] shadow-[0px_6px_24px_0px_rgba(0,0,0,0.08)] relative overflow-hidden">
                             {/* Moving Light Border Animation */}
                             <div className={getBorderClass(1)} style={{ '--start-offset': '180deg' } as React.CSSProperties}></div>
