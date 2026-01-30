@@ -9,7 +9,9 @@ import vasiRec from '../assets/vasi-rec.svg';
 import container from '../assets/Container.svg';
 import GsapScrollReveal from './GsapScrollReveal';
 import GsapTextReveal from './GsapTextReveal';
+import GsapFloat from './GsapFloat';
 import line from '../assets/line.svg';
+import parsed from '../assets/parsed.svg';
 
 
 const Recruitment: React.FC = () => {
@@ -88,44 +90,51 @@ const Recruitment: React.FC = () => {
 
                         {/* 1. Candidate Card (Alice Freeman) - Replaces Michael Foster */}
                         <GsapScrollReveal delay={0.4} className="absolute left-[180px] top-[240px] z-20">
-                            <div className="animate-vibrate">
+                            <GsapFloat amplitude={8} duration={4} delay={0}>
                                 <CandidateCard />
-                            </div>
+                            </GsapFloat>
                         </GsapScrollReveal>
 
                         {/* 2. Resume Parsed Toast (Small) - Replaces previous toast */}
                         <GsapScrollReveal delay={0.5} className="absolute right-[60px] bottom-[90px] z-20">
-                            <div className="animate-vibrate">
+                            <GsapFloat amplitude={6} duration={3.5} delay={0.5}>
                                 <ResumeToastSmall />
-                            </div>
+                            </GsapFloat>
                         </GsapScrollReveal>
 
                         {/* 4. AI Processing Badge - New decorative element */}
                         <GsapScrollReveal delay={0.6} className="absolute left-[-30px] bottom-[500px] z-10">
-                            <div className="animate-vibrate">
+                            <GsapFloat amplitude={10} duration={4.5} delay={0.2}>
                                 <AIProcessingBadge />
-                            </div>
+                            </GsapFloat>
                         </GsapScrollReveal>
 
                         {/* 5. New Candidates Badge - Floating pill */}
                         <GsapScrollReveal delay={0.7} className="absolute right-[180px] top-[60px] z-30">
-                            <div className="animate-vibrate">
+                            <GsapFloat amplitude={7} duration={3} delay={0.8}>
                                 <NewCandidatesBadge />
-                            </div>
+                            </GsapFloat>
                         </GsapScrollReveal>
 
                         {/* 6. Floating Icon Button */}
                         <GsapScrollReveal delay={0.8} className="absolute right-[80px] top-[115px] z-20">
-                            <div className="animate-vibrate">
+                            <GsapFloat amplitude={12} duration={5} delay={0.3}>
                                 <img src={vasiRec} alt="Floating Action Button" className="w-[90px] h-[90px]" />
-                            </div>
+                            </GsapFloat>
                         </GsapScrollReveal>
 
                         {/* 7. Resume Parsed */}
                         <GsapScrollReveal delay={0.5} className="absolute right-[-40px] top-[305px] z-10">
-                            <div className="animate-vibrate">
+                            <GsapFloat amplitude={5} duration={3.8} delay={0.6}>
                                 <img src={container} alt="Resume Parsed" className="w-[300px] h-[150px]" />
-                            </div>
+                            </GsapFloat>
+                        </GsapScrollReveal>
+
+                        {/* 8. Parsed Resume */}
+                        <GsapScrollReveal delay={0.6} className="absolute left-[-50px] top-[500px] z-10">
+                            <GsapFloat amplitude={9} duration={4.2} delay={0.4}>
+                                <img src={parsed} alt="Parsed Resume" className="w-[212px] h-auto" />
+                            </GsapFloat>
                         </GsapScrollReveal>
 
                     </div>
