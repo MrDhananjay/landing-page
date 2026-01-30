@@ -1,5 +1,6 @@
 import React from 'react';
 import GsapScrollReveal from './GsapScrollReveal';
+import GsapTypewriter from './GsapTypewriter';
 
 // Icons - Using inline SVGs based on design
 const ClockIcon = () => (
@@ -95,10 +96,22 @@ const Impact: React.FC = () => {
                     {/* Background Watermark Text - positioned relative to content */}
                     <div className="absolute inset-0 pointer-events-none select-none overflow-visible -z-10">
                         <p className="absolute left-[-246px] top-[-113px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)] whitespace-nowrap">
-                            IMPACT
+                            <GsapTypewriter
+                                text="IMPACT"
+                                charDuration={0.15}
+                                delay={0.6}
+                                triggerStart="top 90%"
+                                showCursor={false}
+                            />
                         </p>
                         <p className="absolute left-[200px] top-[360px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)] whitespace-nowrap">
-                            GROWTH
+                            <GsapTypewriter
+                                text="GROWTH"
+                                charDuration={0.15}
+                                delay={0.3}
+                                triggerStart="top 70%"
+                                showCursor={false}
+                            />
                         </p>
                     </div>
                     {/* Header */}

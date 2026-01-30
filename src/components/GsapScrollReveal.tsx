@@ -49,7 +49,7 @@ const GsapScrollReveal: React.FC<GsapScrollRevealProps> = ({
                 scrollTrigger: {
                     trigger: element,
                     start: triggerStart,
-                    toggleActions: "play none none reverse", // Play on enter, reverse on leave back up
+                    toggleActions: "play none none none", // Play on enter, stay visible always
                 },
             }
         );
