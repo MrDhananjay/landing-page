@@ -1,4 +1,5 @@
 import React from 'react';
+import GsapScrollReveal from './GsapScrollReveal';
 
 // Placeholder avatars - using UI Faces style
 const avatarGuy = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face";
@@ -70,33 +71,40 @@ const Testimonial: React.FC = () => {
             <div className="w-[980px] mx-auto px-4">
                 {/* Header */}
                 <div className="flex justify-between items-start mb-[46px]">
-                    <h2 className="text-[42px] font-['Georgia'] italic text-[#212D39] leading-[48px]">
-                        Client<br />Testimonial
-                    </h2>
-                    <p className="text-[16px] font-poppins text-[#8499BC] w-[329px] leading-[24px]">
-                        We partner with forward-thinking companies to build products that are not just functional, but
-                    </p>
+                    <GsapScrollReveal delay={0.1}>
+                        <h2 className="text-[42px] font-['Georgia'] italic text-[#212D39] leading-[48px]">
+                            Client<br />Testimonial
+                        </h2>
+                    </GsapScrollReveal>
+                    <GsapScrollReveal delay={0.2}>
+                        <p className="text-[16px] font-poppins text-[#8499BC] w-[329px] leading-[24px]">
+                            We partner with forward-thinking companies to build products that are not just functional, but
+                        </p>
+                    </GsapScrollReveal>
                 </div>
 
                 {/* Testimonial Cards */}
                 <div className="flex gap-[24px] justify-center mb-[48px]">
                     {testimonials.map((testimonial, index) => (
-                        <TestimonialCard
-                            key={index}
-                            quote={testimonial.quote}
-                            name={testimonial.name}
-                            handle={testimonial.handle}
-                            avatar={testimonial.avatar}
-                        />
+                        <GsapScrollReveal key={index} delay={0.3 + (index * 0.1)}>
+                            <TestimonialCard
+                                quote={testimonial.quote}
+                                name={testimonial.name}
+                                handle={testimonial.handle}
+                                avatar={testimonial.avatar}
+                            />
+                        </GsapScrollReveal>
                     ))}
                 </div>
 
                 {/* Pagination Dots */}
-                <div className="flex justify-center gap-[6px]">
-                    <div className="w-[24px] h-[4.5px] bg-[#072251] rounded-full" />
-                    <div className="w-[24px] h-[4.5px] bg-[#A8CBFE] rounded-full" />
-                    <div className="w-[24px] h-[4.5px] bg-[#A8CBFE] rounded-full" />
-                </div>
+                <GsapScrollReveal delay={0.6}>
+                    <div className="flex justify-center gap-[6px]">
+                        <div className="w-[24px] h-[4.5px] bg-[#072251] rounded-full" />
+                        <div className="w-[24px] h-[4.5px] bg-[#A8CBFE] rounded-full" />
+                        <div className="w-[24px] h-[4.5px] bg-[#A8CBFE] rounded-full" />
+                    </div>
+                </GsapScrollReveal>
             </div>
         </section>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import GsapScrollReveal from './GsapScrollReveal';
 
 // Icons - Using inline SVGs based on design
 const ClockIcon = () => (
@@ -102,141 +103,153 @@ const Impact: React.FC = () => {
                     </div>
                     {/* Header */}
                     <div className="flex justify-between items-start mb-[63px]">
-                        <h2 className="text-[42px] font-poppins text-[#212D39] leading-[48px] tracking-[-3.35px] w-[287px]">
-                            Real world<br />impact
-                        </h2>
-                        <p className="text-[16px] font-poppins text-[#8499BC] w-[336px] leading-normal">
-                            Automate your hiring from source to offer. Eliminate manual screening and hire top talent 30% faster with our intelligent AI co-pilot.
-                        </p>
+                        <GsapScrollReveal delay={0.1}>
+                            <h2 className="text-[42px] font-poppins text-[#212D39] leading-[48px] tracking-[-3.35px] w-[287px]">
+                                Real world<br />impact
+                            </h2>
+                        </GsapScrollReveal>
+                        <GsapScrollReveal delay={0.2}>
+                            <p className="text-[16px] font-poppins text-[#8499BC] w-[336px] leading-normal">
+                                Automate your hiring from source to offer. Eliminate manual screening and hire top talent 30% faster with our intelligent AI co-pilot.
+                            </p>
+                        </GsapScrollReveal>
                     </div>
 
                     {/* Stat Cards */}
                     <div className="flex gap-[22px]">
                         {/* Card 1: 30% Faster Time-to-Hire */}
-                        <div className="relative w-[310px] h-[288px] bg-[#072251] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden">
-                            {/* Blur effect */}
-                            <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
+                        <GsapScrollReveal delay={0.3}>
+                            <div className="relative w-[310px] h-[288px] bg-[#072251] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden">
+                                {/* Blur effect */}
+                                <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
 
-                            <div className="relative z-10 p-[28px]">
-                                {/* Icon */}
-                                <div className="w-[45px] h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-[22px]">
-                                    <ClockIcon />
+                                <div className="relative z-10 p-[28px]">
+                                    {/* Icon */}
+                                    <div className="w-[45px] h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-[22px]">
+                                        <ClockIcon />
+                                    </div>
+
+                                    {/* Stat */}
+                                    <div className="flex items-end mb-2">
+                                        <span className="text-[56px] font-poppins font-semibold text-white leading-none">30</span>
+                                        <span className="text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-2">%</span>
+                                    </div>
+
+                                    {/* Label */}
+                                    <p className="text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-4">
+                                        FASTER TIME-TO-HIRE
+                                    </p>
+
+                                    {/* Divider */}
+                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
+
+                                    {/* Description */}
+                                    <p className="text-[13px] font-poppins text-[#ADBBD3] leading-[20px]">
+                                        Reduce the time spent on screening and scheduling.
+                                    </p>
                                 </div>
-
-                                {/* Stat */}
-                                <div className="flex items-end mb-2">
-                                    <span className="text-[56px] font-poppins font-semibold text-white leading-none">30</span>
-                                    <span className="text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-2">%</span>
-                                </div>
-
-                                {/* Label */}
-                                <p className="text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-4">
-                                    FASTER TIME-TO-HIRE
-                                </p>
-
-                                {/* Divider */}
-                                <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
-
-                                {/* Description */}
-                                <p className="text-[13px] font-poppins text-[#ADBBD3] leading-[20px]">
-                                    Reduce the time spent on screening and scheduling.
-                                </p>
                             </div>
-                        </div>
+                        </GsapScrollReveal>
 
                         {/* Card 2: 75% Productivity Boost */}
-                        <div className="relative w-[310px] h-[288px] bg-[#2764E4] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden">
-                            {/* Blur effect */}
-                            <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
+                        <GsapScrollReveal delay={0.4}>
+                            <div className="relative w-[310px] h-[288px] bg-[#2764E4] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden">
+                                {/* Blur effect */}
+                                <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
 
-                            <div className="relative z-10 p-[28px]">
-                                {/* Icon */}
-                                <div className="w-[45px] h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-[22px]">
-                                    <TrendUpIcon />
+                                <div className="relative z-10 p-[28px]">
+                                    {/* Icon */}
+                                    <div className="w-[45px] h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-[22px]">
+                                        <TrendUpIcon />
+                                    </div>
+
+                                    {/* Stat */}
+                                    <div className="flex items-end mb-2">
+                                        <span className="text-[56px] font-poppins font-semibold text-white leading-none">75</span>
+                                        <span className="text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-2">%</span>
+                                    </div>
+
+                                    {/* Label */}
+                                    <p className="text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-4">
+                                        PRODUCTIVITY BOOST
+                                    </p>
+
+                                    {/* Divider */}
+                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
+
+                                    {/* Description */}
+                                    <p className="text-[13px] font-poppins text-[#ADBBD3] leading-[20px]">
+                                        Empower your recruiters to focus on what matters: people.
+                                    </p>
                                 </div>
-
-                                {/* Stat */}
-                                <div className="flex items-end mb-2">
-                                    <span className="text-[56px] font-poppins font-semibold text-white leading-none">75</span>
-                                    <span className="text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-2">%</span>
-                                </div>
-
-                                {/* Label */}
-                                <p className="text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-4">
-                                    PRODUCTIVITY BOOST
-                                </p>
-
-                                {/* Divider */}
-                                <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
-
-                                {/* Description */}
-                                <p className="text-[13px] font-poppins text-[#ADBBD3] leading-[20px]">
-                                    Empower your recruiters to focus on what matters: people.
-                                </p>
                             </div>
-                        </div>
+                        </GsapScrollReveal>
 
                         {/* Card 3: 40% Cost Reduction */}
-                        <div className="relative w-[310px] h-[288px] bg-[#EAF0FB] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.08)] overflow-hidden">
-                            {/* Gradient blur effect */}
-                            <div className="absolute w-[200px] h-[200px] right-[-50px] top-[-20px] bg-gradient-to-br from-[#EAF0FB] to-[#D0E1FF] blur-[40px] opacity-80 rounded-full" />
+                        <GsapScrollReveal delay={0.5}>
+                            <div className="relative w-[310px] h-[288px] bg-[#EAF0FB] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.08)] overflow-hidden">
+                                {/* Gradient blur effect */}
+                                <div className="absolute w-[200px] h-[200px] right-[-50px] top-[-20px] bg-gradient-to-br from-[#EAF0FB] to-[#D0E1FF] blur-[40px] opacity-80 rounded-full" />
 
-                            <div className="relative z-10 p-[28px]">
-                                {/* Icon */}
-                                <div className="w-[45px] h-[45px] bg-white rounded-[11px] flex items-center justify-center mb-[22px] shadow-sm">
-                                    <ChartIcon />
+                                <div className="relative z-10 p-[28px]">
+                                    {/* Icon */}
+                                    <div className="w-[45px] h-[45px] bg-white rounded-[11px] flex items-center justify-center mb-[22px] shadow-sm">
+                                        <ChartIcon />
+                                    </div>
+
+                                    {/* Stat */}
+                                    <div className="flex items-end mb-2">
+                                        <span className="text-[56px] font-poppins font-semibold text-[#212D39] leading-none">40</span>
+                                        <span className="text-[19px] font-poppins font-semibold text-[#212D39]/60 ml-1 mb-2">%</span>
+                                    </div>
+
+                                    {/* Label */}
+                                    <p className="text-[11px] font-poppins font-semibold text-[#212D39] uppercase tracking-[0.5px] mb-4">
+                                        COST REDUCTION
+                                    </p>
+
+                                    {/* Divider */}
+                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
+
+                                    {/* Description */}
+                                    <p className="text-[13px] font-poppins text-[#8499BC] leading-[20px]">
+                                        Lower your cost-per-hire with automated efficiency.
+                                    </p>
                                 </div>
-
-                                {/* Stat */}
-                                <div className="flex items-end mb-2">
-                                    <span className="text-[56px] font-poppins font-semibold text-[#212D39] leading-none">40</span>
-                                    <span className="text-[19px] font-poppins font-semibold text-[#212D39]/60 ml-1 mb-2">%</span>
-                                </div>
-
-                                {/* Label */}
-                                <p className="text-[11px] font-poppins font-semibold text-[#212D39] uppercase tracking-[0.5px] mb-4">
-                                    COST REDUCTION
-                                </p>
-
-                                {/* Divider */}
-                                <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
-
-                                {/* Description */}
-                                <p className="text-[13px] font-poppins text-[#8499BC] leading-[20px]">
-                                    Lower your cost-per-hire with automated efficiency.
-                                </p>
                             </div>
-                        </div>
+                        </GsapScrollReveal>
                     </div>
                 </div>
             </div>
 
             {/* Logo Grid Section */}
             <div className="w-full px-[166px] py-[60px]">
-                <div className="w-[980px] mx-auto overflow-hidden rounded-xl border border-[#E5E7EB]">
-                    <div className="grid grid-cols-4 bg-white">
-                        <BrandStrip
-                            brands={[BrandReverland, BrandCopixel, BrandLiva]}
-                            speed="9s"
-                            delay="0s"
-                        />
-                        <BrandStrip
-                            brands={[BrandLiva, BrandFashion, BrandAlpha]}
-                            speed="9s"
-                            delay="0.8s"
-                        />
-                        <BrandStrip
-                            brands={[BrandPure, BrandAlpha, BrandHandCrafted]}
-                            speed="9s"
-                            delay="1.6s"
-                        />
-                        <BrandStrip
-                            brands={[BrandAven, BrandHandCrafted, BrandReverland]}
-                            speed="9s"
-                            delay="2.4s"
-                        />
+                <GsapScrollReveal delay={0.6}>
+                    <div className="w-[980px] mx-auto overflow-hidden rounded-xl border border-[#E5E7EB]">
+                        <div className="grid grid-cols-4 bg-white">
+                            <BrandStrip
+                                brands={[BrandReverland, BrandCopixel, BrandLiva]}
+                                speed="9s"
+                                delay="0s"
+                            />
+                            <BrandStrip
+                                brands={[BrandLiva, BrandFashion, BrandAlpha]}
+                                speed="9s"
+                                delay="0.8s"
+                            />
+                            <BrandStrip
+                                brands={[BrandPure, BrandAlpha, BrandHandCrafted]}
+                                speed="9s"
+                                delay="1.6s"
+                            />
+                            <BrandStrip
+                                brands={[BrandAven, BrandHandCrafted, BrandReverland]}
+                                speed="9s"
+                                delay="2.4s"
+                            />
+                        </div>
                     </div>
-                </div>
+                </GsapScrollReveal>
             </div>
         </section>
     );

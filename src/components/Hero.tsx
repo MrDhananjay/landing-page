@@ -1,5 +1,7 @@
 import React from 'react';
 import Typewriter from './Typewriter';
+import GsapScrollReveal from './GsapScrollReveal';
+import GsapTextReveal from './GsapTextReveal';
 
 const COLORS = ['bg-orange-400', 'bg-blue-400', 'bg-purple-400', 'bg-green-400', 'bg-red-400', 'bg-pink-400', 'bg-indigo-400'];
 
@@ -18,7 +20,7 @@ const Hero: React.FC = () => {
             {/* Background Gradients (Group 427320765) */}
             {/* Background Gradients (Group 427320765) */}
             <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-[606px] pointer-events-none z-0">
-               <img className="w-full h-full object-cover no-repeat" src="/gradient.svg" alt="Gradient" />
+                <img className="w-full h-full object-cover no-repeat" src="/gradient.svg" alt="Gradient" />
 
                 {/* Ellipse 2054 (Left - Orange)
                 <div className="absolute top-[-166px] left-[-10%] w-[50%] h-[360px] bg-[#F4A940] rounded-full blur-[100px] mix-blend-screen opacity-60" />
@@ -34,48 +36,55 @@ const Hero: React.FC = () => {
 
             <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-4 text-center">
                 {/* Tag */}
-                <div className="flex items-center gap-2 mb-6">
-                    <div className={`w-2.5 h-2.5 rounded-full ${dotColor} transition-colors duration-300`} /> {/* Placeholder icon */}
-                    <div className="text-[#a4adbf] font-poppins font-normal text-sm tracking-wide pr-2">
-                        <Typewriter
-                            texts={[
-                                "AI-Powered Hiring",
-                                "Less Manual Effort",
-                                "Faster Time-to-Hire",
-                                "Data-Driven Hiring Decisions",
-                                "Real-Time Hiring Insights",
-                                "Reduced Time-to-Hire",
-                                "Scalable Recruitment Process",
-                                "Hire the Right Talent",
-                                "Faster"
-                            ]}
-                            speed={50}
-                            pause={2000}
-                            className="inline-block"
-                            onNext={handleNext}
-                        />
+                <GsapScrollReveal delay={0.1}>
+                    <div className="flex items-center gap-2 mb-6">
+                        <div className={`w-2.5 h-2.5 rounded-full ${dotColor} transition-colors duration-300`} /> {/* Placeholder icon */}
+                        <div className="text-[#a4adbf] font-poppins font-normal text-sm tracking-wide pr-2">
+                            <Typewriter
+                                texts={[
+                                    "AI-Powered Hiring",
+                                    "Less Manual Effort",
+                                    "Faster Time-to-Hire",
+                                    "Data-Driven Hiring Decisions",
+                                    "Real-Time Hiring Insights",
+                                    "Reduced Time-to-Hire",
+                                    "Scalable Recruitment Process",
+                                    "Hire the Right Talent",
+                                    "Faster"
+                                ]}
+                                speed={50}
+                                pause={2000}
+                                className="inline-block"
+                                onNext={handleNext}
+                            />
+                        </div>
                     </div>
-                </div>
-
+                </GsapScrollReveal>
                 {/* Headline */}
-                <h1 className="text-[48px] font-poppins font-normal text-primary-accent leading-tight mb-6">
-                    <span>Automation hiring & </span>
-                    <span className="text-orange-primary">cut </span>
-                    <br />
-                    <span className="text-orange-primary">time -to-hire</span>
-                    <span> in half</span>
-                </h1>
+                <GsapScrollReveal delay={0.2}>
+                    <h1 className="text-[48px] font-poppins font-normal text-primary-accent leading-tight mb-6">
+                        <GsapTextReveal>Automation hiring & </GsapTextReveal>
+                        <span className="text-orange-primary">cut </span>
+                        <br />
+                        <span className="text-orange-primary">time -to-hire</span>
+                        <GsapTextReveal> in half</GsapTextReveal>
+                    </h1>
+                </GsapScrollReveal>
 
                 {/* Subhead */}
-                <p className="text-[#adadad] text-[16px] font-[400] max-w-[472px] mb-10 font-poppins">
-                    One smart platform that helps recruiters hire faster
-                    and job seekers find the right job—without the hassle.
-                </p>
+                <GsapScrollReveal delay={0.3}>
+                    <p className="text-[#adadad] text-[16px] font-[400] max-w-[472px] mb-10 font-poppins">
+                        One smart platform that helps recruiters hire faster
+                        and job seekers find the right job—without the hassle.
+                    </p>
+                </GsapScrollReveal>
 
                 {/* CTA Button */}
-                <button className="w-[200px] h-[48px] flex items-center justify-center bg-[#f4a940] rounded-lg text-white font-regular text-[16px] hover:bg-orange-500 transition-colors duration-200">
-                    Book Demo
-                </button>
+                <GsapScrollReveal delay={0.4}>
+                    <button className="w-[200px] h-[48px] flex items-center justify-center bg-[#f4a940] rounded-lg text-white font-regular text-[16px] hover:bg-orange-500 transition-colors duration-200">
+                        Book Demo
+                    </button>
+                </GsapScrollReveal>
             </div>
 
             {/* Curved Wave Background Shape */}

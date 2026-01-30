@@ -84,7 +84,7 @@ export const ResumeToastDetailed: React.FC = () => {
 // 4. Candidate Profile Card (Alice Freeman) - Node 351-899
 export const CandidateCard: React.FC = () => {
     return (
-        <div className="bg-[rgba(255,255,255,0.7)] backdrop-blur-[20px] border-[1px] border-[rgba(255,255,255,0.8)] flex flex-col gap-[20px] items-start p-[20px] relative rounded-[20px] shadow-[0px_20px_41px_0px_rgba(0,0,0,0.15)] w-[262px]">
+        <div className="bg-[rgba(255,255,255,0.7)] border-[1px] border-[rgba(255,255,255,0.8)] flex flex-col gap-[20px] items-start p-[20px] relative rounded-[20px] shadow-[0px_20px_41px_0px_rgba(0,0,0,0.15)] w-[262px]">
             <div className="flex justify-between items-start w-full">
                 <div className="flex flex-col">
                     <p className="font-poppins font-semibold leading-[23px] text-[#0a337a] text-[15px] tracking-[-0.36px]">

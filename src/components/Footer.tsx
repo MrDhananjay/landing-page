@@ -1,4 +1,5 @@
 import React from 'react';
+import GsapScrollReveal from './GsapScrollReveal';
 const whiteIcon = "/white-logo.svg";
 const vasitumBottom = "/vasi.svg";
 
@@ -9,50 +10,58 @@ const Footer: React.FC = () => {
             <div className="w-[1112px] mx-auto pt-[180px] pb-[50px] relative z-10">
                 <div className="flex gap-[112px] mb-[18px]">
                     {/* Logo Section */}
-                    <div className="w-[169px] flex-shrink-0 relative">
-                        <div className="flex items-center gap-2 px-4 py-2">
-                            {/* Logo Icon */}
-                            <img src={whiteIcon} alt="Logo Icon" className="w-full h-full" />
+                    <GsapScrollReveal delay={0.1}>
+                        <div className="w-[169px] flex-shrink-0 relative">
+                            <div className="flex items-center gap-2 px-4 py-2">
+                                {/* Logo Icon */}
+                                <img src={whiteIcon} alt="Logo Icon" className="w-full h-full" />
+                            </div>
+                            {/* Vertical separator line */}
+                            <div className="absolute right-[-3px] top-0 w-px h-[225px] bg-[#1B4178]" />
                         </div>
-                        {/* Vertical separator line */}
-                        <div className="absolute right-[-3px] top-0 w-px h-[225px] bg-[#1B4178]" />
-                    </div>
+                    </GsapScrollReveal>
 
                     {/* Navigation Links */}
                     <div className="flex gap-[120px]">
                         {/* Vasitum Column */}
-                        <div className="w-[172px]">
-                            <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Vasitum</h4>
-                            <ul className="space-y-[16px]">
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">About us</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Our clients</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Get in touch</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">E-Book</a></li>
-                            </ul>
-                        </div>
+                        <GsapScrollReveal delay={0.2}>
+                            <div className="w-[172px]">
+                                <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Vasitum</h4>
+                                <ul className="space-y-[16px]">
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">About us</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Our clients</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Get in touch</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">E-Book</a></li>
+                                </ul>
+                            </div>
+                        </GsapScrollReveal>
 
                         {/* Quick links Column */}
-                        <div className="w-[172px]">
-                            <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Quick links</h4>
-                            <ul className="space-y-[16px]">
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Blogs</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Solutions</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Privacy policy</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Terms & conditions</a></li>
-                            </ul>
-                        </div>
+                        <GsapScrollReveal delay={0.3}>
+                            <div className="w-[172px]">
+                                <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Quick links</h4>
+                                <ul className="space-y-[16px]">
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Blogs</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Solutions</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Privacy policy</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Terms & conditions</a></li>
+                                </ul>
+                            </div>
+                        </GsapScrollReveal>
 
                         {/* Jobs by industry Column */}
-                        <div className="w-[172px]">
-                            <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Jobs by industry</h4>
-                            <ul className="space-y-[16px]">
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Information Technology</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Marketing</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Sales</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Artificial Intelligence</a></li>
-                                <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Data Science</a></li>
-                            </ul>
-                        </div>
+                        <GsapScrollReveal delay={0.4}>
+                            <div className="w-[172px]">
+                                <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Jobs by industry</h4>
+                                <ul className="space-y-[16px]">
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Information Technology</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Marketing</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Sales</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Artificial Intelligence</a></li>
+                                    <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Data Science</a></li>
+                                </ul>
+                            </div>
+                        </GsapScrollReveal>
                     </div>
                 </div>
 
@@ -60,14 +69,16 @@ const Footer: React.FC = () => {
                 <div className="w-full h-px bg-[#1B4178] mb-[20px]" />
 
                 {/* Bottom Bar */}
-                <div className="flex justify-between items-center">
-                    <a href="mailto:meet@vasitum.com" className="text-white font-poppins text-[14px] hover:text-[#F4A940] transition-colors">
-                        meet@vasitum.com
-                    </a>
-                    <p className="text-white font-poppins text-[12px] leading-[1.4]">
-                        © Copyright 2024, Vasitum
-                    </p>
-                </div>
+                <GsapScrollReveal delay={0.5}>
+                    <div className="flex justify-between items-center">
+                        <a href="mailto:meet@vasitum.com" className="text-white font-poppins text-[14px] hover:text-[#F4A940] transition-colors">
+                            meet@vasitum.com
+                        </a>
+                        <p className="text-white font-poppins text-[12px] leading-[1.4]">
+                            © Copyright 2024, Vasitum
+                        </p>
+                    </div>
+                </GsapScrollReveal>
             </div>
 
             {/* Large Watermark Text - positioned at bottom */}
