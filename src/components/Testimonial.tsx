@@ -21,24 +21,24 @@ interface TestimonialCardProps {
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, handle, avatar }) => (
-    <div className="bg-[#EAF0FB] rounded-[24px] p-6 w-[305px] h-[243px] flex flex-col justify-between">
-        <div>
-            <div className="mb-4">
-                <QuoteIcon />
-            </div>
-            <p className="text-[#212D39] font-poppins text-[15px] leading-[23px]">
-                {quote}
-            </p>
+    <div className="bg-[#F1F2F5] rounded-[30px] pt-[24px] px-[24px] pb-0 w-[305px] h-[243px] flex flex-col relative overflow-hidden">
+        <div className="mb-4 opacity-50">
+            <QuoteIcon />
         </div>
-        <div className="flex items-center gap-3">
+        <p className="text-[#212D39] font-poppins font-normal text-[18px] leading-[23px] tracking-[0.05px] whitespace-pre-wrap">
+            {quote}
+        </p>
+
+        {/* Author Box */}
+        <div className="absolute bottom-0 left-0 bg-white px-[24px] py-[18px] rounded-tr-[30px] flex items-center gap-[12px] min-w-[180px]">
             <img
                 src={avatar}
                 alt={name}
-                className="w-9 h-9 rounded-full object-cover"
+                className="w-[36px] h-[36px] rounded-full object-cover bg-[#f1f2f5]"
             />
-            <div>
-                <p className="text-[#212D39] font-poppins font-medium text-[13px]">{name}</p>
-                <p className="text-[#8499BC] font-poppins text-[12px]">{handle}</p>
+            <div className="flex flex-col">
+                <p className="text-[#212D39] font-poppins font-semibold text-[14px] leading-tight">{name}</p>
+                <p className="text-[#8499BC] font-poppins font-medium text-[11px] leading-tight tracking-[-0.1px]">{handle}</p>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@ const Testimonial: React.FC = () => {
             avatar: avatarGuy
         },
         {
-            quote: "A seamless experience from start to finish. Highly recommend!",
+            quote: "A seamless experience\nfrom start to finish.\nHighly recommend!",
             name: "Karla Lynn",
             handle: "@karlalynn98",
             avatar: avatarKarla
@@ -72,8 +72,8 @@ const Testimonial: React.FC = () => {
                 {/* Header */}
                 <div className="flex justify-between items-start mb-[46px]">
                     <GsapScrollReveal delay={0.1}>
-                        <h2 className="text-[42px] font-['Georgia'] italic text-[#212D39] leading-[48px]">
-                            Client<br />Testimonial
+                        <h2 className="text-[42px] font-poppins text-[#212D39] leading-[48px]">
+                            Client<br />Testimonials
                         </h2>
                     </GsapScrollReveal>
                     <GsapScrollReveal delay={0.2}>
@@ -100,9 +100,9 @@ const Testimonial: React.FC = () => {
                 {/* Pagination Dots */}
                 <GsapScrollReveal delay={0.6}>
                     <div className="flex justify-center gap-[6px]">
-                        <div className="w-[24px] h-[4.5px] bg-[#072251] rounded-full" />
-                        <div className="w-[24px] h-[4.5px] bg-[#A8CBFE] rounded-full" />
-                        <div className="w-[24px] h-[4.5px] bg-[#A8CBFE] rounded-full" />
+                        <div className="w-[24px] h-[4.5px] bg-[#212D39] rounded-full" />
+                        <div className="w-[24px] h-[4.5px] bg-[#F1F2F5] rounded-full" />
+                        <div className="w-[24px] h-[4.5px] bg-[#F1F2F5] rounded-full" />
                     </div>
                 </GsapScrollReveal>
             </div>

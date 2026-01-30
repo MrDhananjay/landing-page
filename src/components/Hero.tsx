@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                 {/* Headline */}
                 <GsapScrollReveal delay={0.2}>
                     <h1 className="text-[48px] font-poppins font-normal text-primary-accent leading-tight mb-6">
-                        <GsapTextReveal>Automation hiring & </GsapTextReveal>
+                        <GsapTextReveal>Automate hiring & </GsapTextReveal>
                         <span className="text-orange-primary">cut </span>
                         <br />
                         <span className="text-orange-primary">time -to-hire</span>

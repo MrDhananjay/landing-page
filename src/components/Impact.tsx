@@ -132,7 +132,7 @@ const Impact: React.FC = () => {
                     <div className="flex gap-[22px]">
                         {/* Card 1: 30% Faster Time-to-Hire */}
                         <GsapScrollReveal delay={0.3}>
-                            <div className="relative w-[310px] h-[288px] bg-[#072251] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden">
+                            <div className="relative w-[310px] h-[288px] bg-[#072251] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(0,0,0,0.5)] cursor-pointer group">
                                 {/* Blur effect */}
                                 <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
 
@@ -166,7 +166,7 @@ const Impact: React.FC = () => {
 
                         {/* Card 2: 75% Productivity Boost */}
                         <GsapScrollReveal delay={0.4}>
-                            <div className="relative w-[310px] h-[288px] bg-[#2764E4] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden">
+                            <div className="relative w-[310px] h-[288px] bg-[#2764E4] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(0,0,0,0.5)] cursor-pointer group">
                                 {/* Blur effect */}
                                 <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
 
@@ -200,7 +200,7 @@ const Impact: React.FC = () => {
 
                         {/* Card 3: 40% Cost Reduction */}
                         <GsapScrollReveal delay={0.5}>
-                            <div className="relative w-[310px] h-[288px] bg-[#EAF0FB] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.08)] overflow-hidden">
+                            <div className="relative w-[310px] h-[288px] bg-[#EAF0FB] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(33,45,57,0.15)] cursor-pointer group">
                                 {/* Gradient blur effect */}
                                 <div className="absolute w-[200px] h-[200px] right-[-50px] top-[-20px] bg-gradient-to-br from-[#EAF0FB] to-[#D0E1FF] blur-[40px] opacity-80 rounded-full" />
 
