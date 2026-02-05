@@ -26,24 +26,24 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <section className="w-full relative z-20">
-            <div className="w-[1104px] mx-auto">
+        <section className="w-full relative z-20 px-4">
+            <div className="w-full max-w-[1104px] mx-auto">
                 {/* Contact Card - positioned to overlap footer */}
-                <div className="bg-white rounded-[60px] shadow-[0px_17.589px_35.179px_0px_rgba(19,19,19,0.2)] border-[0.704px] border-white p-[50px] flex gap-[46px] items-center justify-center mb-[-120px]">
+                <div className="bg-white rounded-[30px] md:rounded-[60px] shadow-[0px_17.589px_35.179px_0px_rgba(19,19,19,0.2)] border-[0.704px] border-white p-6 md:p-[50px] flex flex-col lg:flex-row gap-6 md:gap-[46px] items-center justify-center mb-[-80px] md:mb-[-120px]">
                     {/* Left Side */}
                     <GsapScrollReveal delay={0.1}>
-                        <div className="flex flex-col gap-[46px] items-start justify-center">
-                            <div className="flex flex-col gap-[10px] w-[343px]">
-                                <h2 className="text-[42px] font-poppins text-[#212D39] leading-[48px] tracking-[-3.35px] w-[287px]">
+                        <div className="flex flex-col gap-4 md:gap-[46px] items-center lg:items-start justify-center text-center lg:text-left">
+                            <div className="flex flex-col gap-[10px] w-full lg:w-[343px]">
+                                <h2 className="text-[28px] md:text-[42px] font-poppins text-[#212D39] leading-tight md:leading-[48px] tracking-[-1px] md:tracking-[-3.35px]">
                                     Let's talk
                                 </h2>
-                                <p className="text-[#ADBBD3] font-poppins text-[16px] w-[336px]">
+                                <p className="text-[#ADBBD3] font-poppins text-[14px] md:text-[16px] w-full lg:w-[336px]">
                                     Ask us anything or just say hi........
                                 </p>
                             </div>
                             <a
                                 href="mailto:meet@vasitum.com"
-                                className="flex items-center gap-[9px] text-[#335590] font-poppins text-[16px] hover:text-[#F4A940] transition-colors"
+                                className="flex items-center gap-[9px] text-[#335590] font-poppins text-[14px] md:text-[16px] hover:text-[#F4A940] transition-colors"
                             >
                                 <SmsIcon />
                                 meet@vasitum.com
@@ -53,11 +53,11 @@ const Contact: React.FC = () => {
 
                     {/* Right Side - Form */}
                     <GsapScrollReveal delay={0.3}>
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-[28px] justify-center">
-                            <div className="flex flex-col gap-[23px]">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-[28px] justify-center w-full">
+                            <div className="flex flex-col gap-4 md:gap-[23px]">
                                 {/* Row 1: Two email fields */}
-                                <div className="flex gap-[62px]">
-                                    <div className="w-[226px]">
+                                <div className="flex flex-col md:flex-row gap-4 md:gap-[62px]">
+                                    <div className="w-full md:w-[226px]">
                                         <label className="block text-[#8499BC] font-poppins font-semibold text-[12px] tracking-[1.2px] h-[14px]">
                                             Your Email
                                         </label>
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-[226px]">
+                                    <div className="w-full md:w-[226px]">
                                         <label className="block text-[#8499BC] font-poppins font-semibold text-[12px] tracking-[1.2px] h-[14px]">
                                             Your Email
                                         </label>
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                                 </div>
 
                                 {/* Row 2: Message field (full width) */}
-                                <div className="w-[514px]">
+                                <div className="w-full md:w-[514px]">
                                     <label className="block text-[#8499BC] font-poppins font-semibold text-[12px] tracking-[1.2px] h-[14px]">
                                         Your Email
                                     </label>
@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-[134px] bg-[#F4A940] text-white font-poppins font-semibold text-[14px] px-[10px] py-[13px] rounded-[10px] shadow-[0px_1px_3px_0px_rgba(57,60,70,0.1),0px_1px_2px_0px_rgba(57,60,70,0.1)] hover:bg-[#E09930] transition-colors tracking-[-0.15px]"
+                                className="w-full md:w-[134px] bg-[#F4A940] text-white font-poppins font-semibold text-[14px] px-[10px] py-[13px] rounded-[10px] shadow-[0px_1px_3px_0px_rgba(57,60,70,0.1),0px_1px_2px_0px_rgba(57,60,70,0.1)] hover:bg-[#E09930] transition-colors tracking-[-0.15px]"
                             >
                                 Send
                             </button>

@@ -27,18 +27,18 @@ const Features: React.FC = () => {
             <div className="max-w-6xl mx-auto px-4">
                 {/* Header */}
                 <GsapScrollReveal>
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-16 gap-4 md:gap-6">
                         <div className="max-w-xl">
-                            <h2 className="text-[40px] font-poppins text-[#2B2E34] leading-normal mb-4">
+                            <h2 className="text-[24px] md:text-[32px] lg:text-[40px] font-poppins text-[#2B2E34] leading-normal mb-3 md:mb-4">
                                 <span className="font-[300]">Everything you need to hire </span>
                                 <GsapTextReveal className="font-medium">faster and smarter.</GsapTextReveal>
                             </h2>
-                            <p className="text-[#ADADAD] text-[16px] font-poppins">
-                                Replace manual tasks with intelligent automation. Vasitum <br /> handles the busy work so you can focus on building your team.
+                            <p className="text-[#ADADAD] text-[14px] md:text-[16px] font-poppins">
+                                Replace manual tasks with intelligent automation. Vasitum handles the busy work so you can focus on building your team.
                             </p>
                         </div>
 
-                        <button className="flex items-center gap-2 px-6 py-2.5 bg-white border border-[#e5e7eb] rounded-[10px] shadow-[0px_1px_3px_0px_rgba(57,60,70,0.1),0px_1px_2px_-1px_rgba(57,60,70,0.1)] text-[#364153] text-[14px] font-semibold font-['Inter'] hover:bg-gray-50 transition-colors">
+                        <button className="flex items-center gap-2 px-4 md:px-6 py-2.5 bg-white border border-[#e5e7eb] rounded-[10px] shadow-[0px_1px_3px_0px_rgba(57,60,70,0.1),0px_1px_2px_-1px_rgba(57,60,70,0.1)] text-[#364153] text-[14px] font-semibold font-['Inter'] hover:bg-gray-50 transition-colors">
                             See all
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.33333 8H12.6667M12.6667 8L8 3.33333M12.6667 8L8 12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -48,20 +48,20 @@ const Features: React.FC = () => {
                 </GsapScrollReveal>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {/* Card 1: Automated Screening (Tall) */}
                     <GsapScrollReveal className="col-span-1 lg:row-span-2 h-full relative" delay={0.1}>
                         {/* Background Line SVG - Left */}
                         <div
-                            className="absolute left-[-10px] top-0 h-full w-[1px] pointer-events-none select-none"
+                            className="hidden lg:block absolute left-[-10px] top-0 h-full w-[1px] pointer-events-none select-none"
                             style={{ zIndex: -1, background: 'linear-gradient(to bottom, #6FA8FF, white)' }}
                         />
                         {/* Background Line SVG - Right (between cards) */}
                         <div
-                            className="absolute right-[-10px] top-0 h-full w-[1px] pointer-events-none select-none"
+                            className="hidden lg:block absolute right-[-10px] top-0 h-full w-[1px] pointer-events-none select-none"
                             style={{ zIndex: -1, background: 'linear-gradient(to bottom, #6FA8FF, white)' }}
                         />
-                        <div className="bg-gradient-to-b from-[rgba(238,242,255,0.5)] to-white rounded-3xl p-8 h-full transition-transform hover:scale-[1.01] duration-300 border border-transparent hover:border-gray-100 relative overflow-hidden">
+                        <div className="bg-gradient-to-b from-[rgba(238,242,255,0.5)] to-white rounded-3xl p-5 md:p-8 h-full transition-transform hover:scale-[1.01] duration-300 border border-transparent hover:border-gray-100 relative overflow-hidden">
                             {/* Animated Border Layer */}
                             <div className={getBorderClass(0)} style={{ '--start-offset': '270deg' } as React.CSSProperties}></div>
 
@@ -132,7 +132,7 @@ const Features: React.FC = () => {
 
                     {/* Card 4: Ask Vasitum AI (Wide) */}
                     <GsapScrollReveal className="col-span-1 lg:col-span-2 relative" delay={0.2}>
-                        <div className="bg-white group rounded-3xl p-5 w-full h-full flex flex-col md:flex-row items-center gap-8 transition-transform hover:scale-[1.01] duration-300 border-r border-b border-transparent hover:border-r-[#F4A940] hover:border-b-[#F4A940] shadow-[0px_6px_24px_0px_rgba(0,0,0,0.08)] relative overflow-hidden">
+                        <div className="bg-white group rounded-3xl p-4 md:p-5 w-full h-full flex flex-col md:flex-row items-center gap-4 md:gap-8 transition-transform hover:scale-[1.01] duration-300 border-r border-b border-transparent hover:border-r-[#F4A940] hover:border-b-[#F4A940] shadow-[0px_6px_24px_0px_rgba(0,0,0,0.08)] relative overflow-hidden">
                             {/* Moving Light Border Animation */}
                             <div className={getBorderClass(1)} style={{ '--start-offset': '180deg' } as React.CSSProperties}></div>
 
@@ -151,7 +151,7 @@ const Features: React.FC = () => {
                             </div>
 
                             {/* Mock Chat UI */}
-                            <div className="bg-white p-[7px] rounded-[13px] shadow-[0px_16px_20px_-4px_rgba(57,60,70,0.1),0px_6px_8px_-4px_rgba(57,60,70,0.1)] w-full max-w-[320px] relative border border-[#f3f4f6] flex flex-col font-poppins z-10">
+                            <div className="bg-white p-[7px] rounded-[13px] shadow-[0px_16px_20px_-4px_rgba(57,60,70,0.1),0px_6px_8px_-4px_rgba(57,60,70,0.1)] w-full md:max-w-[320px] relative border border-[#f3f4f6] flex flex-col font-poppins z-10">
                                 {/* Header */}
                                 <div className="flex items-center gap-[15px] h-[46px] border-b border-[#f9fafb] pl-[10px] mb-4 w-full">
                                     <div className="relative shrink-0">
@@ -182,7 +182,7 @@ const Features: React.FC = () => {
 
                     {/* Card 2: Agile Workflow AI - Moved down */}
                     <GsapScrollReveal className="col-span-1" delay={0.3}>
-                        <div className="bg-[#FFF8F4] rounded-3xl p-8 h-full transition-transform hover:scale-[1.01] duration-300 relative overflow-hidden">
+                        <div className="bg-[#FFF8F4] rounded-3xl p-5 md:p-8 h-full transition-transform hover:scale-[1.01] duration-300 relative overflow-hidden">
                             {/* Animated Border Layer */}
                             <div className={getBorderClass(2)} style={{ '--start-offset': '0deg' } as React.CSSProperties}></div>
 
@@ -203,7 +203,7 @@ const Features: React.FC = () => {
 
                     {/* Card 3: Data Insights - Moved down */}
                     <GsapScrollReveal className="col-span-1" delay={0.4}>
-                        <div className="bg-white border border-gray-100 rounded-3xl p-8 h-full shadow-sm transition-transform hover:scale-[1.01] duration-300 relative overflow-hidden">
+                        <div className="bg-white border border-gray-100 rounded-3xl p-5 md:p-8 h-full shadow-sm transition-transform hover:scale-[1.01] duration-300 relative overflow-hidden">
                             {/* Animated Border Layer */}
                             <div className={getBorderClass(3)} style={{ '--start-offset': '90deg' } as React.CSSProperties}></div>
 

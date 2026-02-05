@@ -5,10 +5,10 @@ const vasitumBottom = "/vasi.svg";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="w-full bg-gradient-to-b from-[#1c3f94] to-[#1b2a4e] rounded-tl-[60px] rounded-tr-[60px] relative overflow-hidden">
+        <footer className="w-full bg-gradient-to-b from-[#1c3f94] to-[#1b2a4e] rounded-tl-[40px] md:rounded-tl-[60px] rounded-tr-[40px] md:rounded-tr-[60px] relative overflow-hidden">
             {/* Main Footer Content - pt-[115px] to make room for overlapping Contact card */}
-            <div className="w-[1112px] mx-auto pt-[180px] pb-[50px] relative z-10">
-                <div className="flex gap-[112px] mb-[18px]">
+            <div className="w-full max-w-[1112px] mx-auto px-4 pt-[120px] md:pt-[180px] pb-8 md:pb-[50px] relative z-10">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-[112px] mb-[18px]">
                     {/* Logo Section */}
                     <GsapScrollReveal delay={0.1}>
                         <div className="w-[169px] flex-shrink-0 relative">
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                     </GsapScrollReveal>
 
                     {/* Navigation Links */}
-                    <div className="flex gap-[120px]">
+                    <div className="flex flex-wrap gap-8 lg:gap-[120px]">
                         {/* Vasitum Column */}
                         <GsapScrollReveal delay={0.2}>
                             <div className="w-[172px]">
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
 
                         {/* Quick links Column */}
                         <GsapScrollReveal delay={0.3}>
-                            <div className="w-[172px]">
+                            <div className="w-full sm:w-[172px]">
                                 <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Quick links</h4>
                                 <ul className="space-y-[16px]">
                                     <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Blogs</a></li>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
 
                         {/* Jobs by industry Column */}
                         <GsapScrollReveal delay={0.4}>
-                            <div className="w-[172px]">
+                            <div className="w-full sm:w-[172px]">
                                 <h4 className="text-white font-poppins font-semibold text-[16px] leading-[22px] mb-[16px]">Jobs by industry</h4>
                                 <ul className="space-y-[16px]">
                                     <li><a href="#" className="text-[#8499BC] font-poppins text-[14px] leading-[22px] hover:text-white transition-colors">Information Technology</a></li>

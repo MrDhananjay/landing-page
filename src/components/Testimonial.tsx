@@ -21,24 +21,24 @@ interface TestimonialCardProps {
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, handle, avatar }) => (
-    <div className="bg-[#F1F2F5] rounded-[30px] pt-[24px] px-[24px] pb-0 w-[305px] h-[243px] flex flex-col relative overflow-hidden">
+    <div className="bg-[#F1F2F5] rounded-[30px] pt-[24px] px-[24px] pb-0 w-[280px] md:w-[305px] h-[220px] md:h-[243px] flex flex-col relative overflow-hidden flex-shrink-0">
         <div className="mb-4 opacity-50">
             <QuoteIcon />
         </div>
-        <p className="text-[#212D39] font-poppins font-normal text-[18px] leading-[23px] tracking-[0.05px] whitespace-pre-wrap">
+        <p className="text-[#212D39] font-poppins font-normal text-[16px] md:text-[18px] leading-[22px] md:leading-[23px] tracking-[0.05px] whitespace-pre-wrap">
             {quote}
         </p>
 
         {/* Author Box */}
-        <div className="absolute bottom-0 left-0 bg-white px-[24px] py-[18px] rounded-tr-[30px] flex items-center gap-[12px] min-w-[180px]">
+        <div className="absolute bottom-0 left-0 bg-white px-[20px] md:px-[24px] py-[14px] md:py-[18px] rounded-tr-[30px] flex items-center gap-[12px] min-w-[160px] md:min-w-[180px]">
             <img
                 src={avatar}
                 alt={name}
-                className="w-[36px] h-[36px] rounded-full object-cover bg-[#f1f2f5]"
+                className="w-[32px] h-[32px] md:w-[36px] md:h-[36px] rounded-full object-cover bg-[#f1f2f5]"
             />
             <div className="flex flex-col">
-                <p className="text-[#212D39] font-poppins font-semibold text-[14px] leading-tight">{name}</p>
-                <p className="text-[#8499BC] font-poppins font-medium text-[11px] leading-tight tracking-[-0.1px]">{handle}</p>
+                <p className="text-[#212D39] font-poppins font-semibold text-[13px] md:text-[14px] leading-tight">{name}</p>
+                <p className="text-[#8499BC] font-poppins font-medium text-[10px] md:text-[11px] leading-tight tracking-[-0.1px]">{handle}</p>
             </div>
         </div>
     </div>
@@ -66,38 +66,85 @@ const Testimonial: React.FC = () => {
         }
     ];
 
+    // Duplicate testimonials for seamless infinite scroll
+    const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+
     return (
-        <section className="w-full py-20 bg-white">
-            <div className="w-[980px] mx-auto px-4">
+        <section className="w-full py-10 md:py-20 bg-white overflow-hidden">
+            <style>
+                {`
+                @keyframes scroll-left {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-33.33%); }
+                }
+                .carousel-track {
+                    animation: scroll-left 20s linear infinite;
+                }
+                .carousel-track:hover {
+                    animation-play-state: paused;
+                }
+                `}
+            </style>
+            <div className="w-full max-w-[980px] mx-auto px-4">
                 {/* Header */}
-                <div className="flex justify-between items-start mb-[46px]">
+                <div className="flex flex-col md:flex-row justify-between items-start gap-4 md:gap-0 mb-8 md:mb-[46px]">
                     <GsapScrollReveal delay={0.1}>
-                        <h2 className="text-[42px] font-poppins text-[#212D39] leading-[48px]">
+                        <h2 className="text-[28px] md:text-[36px] lg:text-[42px] font-poppins text-[#212D39] leading-tight md:leading-[48px]">
                             Client<br />Testimonials
                         </h2>
                     </GsapScrollReveal>
                     <GsapScrollReveal delay={0.2}>
-                        <p className="text-[16px] font-poppins text-[#8499BC] w-[329px] leading-[24px]">
+                        <p className="text-[14px] md:text-[16px] font-poppins text-[#8499BC] w-full md:w-[329px] leading-[24px]">
                             We partner with forward-thinking companies to build products that are not just functional, but
                         </p>
                     </GsapScrollReveal>
                 </div>
+            </div>
 
-                {/* Testimonial Cards */}
-                <div className="flex gap-[24px] justify-center mb-[48px]">
-                    {testimonials.map((testimonial, index) => (
-                        <GsapScrollReveal key={index} delay={0.3 + (index * 0.1)}>
+            {/* Infinite Carousel - Mobile and Tablet only */}
+            <div className="lg:hidden w-full overflow-hidden mb-8 md:mb-[48px]">
+                <GsapScrollReveal delay={0.3}>
+                    <div className="carousel-track flex gap-4 md:gap-[24px]" style={{ width: 'fit-content' }}>
+                        {duplicatedTestimonials.map((testimonial, index) => (
                             <TestimonialCard
+                                key={index}
                                 quote={testimonial.quote}
                                 name={testimonial.name}
                                 handle={testimonial.handle}
                                 avatar={testimonial.avatar}
                             />
-                        </GsapScrollReveal>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                </GsapScrollReveal>
+            </div>
 
-                {/* Pagination Dots */}
+            {/* Static Cards - Desktop only */}
+            <div className="hidden lg:flex w-full max-w-[980px] mx-auto px-4 gap-[24px] justify-center mb-[48px]">
+                {testimonials.map((testimonial, index) => (
+                    <GsapScrollReveal key={index} delay={0.3 + (index * 0.1)}>
+                        <TestimonialCard
+                            quote={testimonial.quote}
+                            name={testimonial.name}
+                            handle={testimonial.handle}
+                            avatar={testimonial.avatar}
+                        />
+                    </GsapScrollReveal>
+                ))}
+            </div>
+
+            {/* Pagination Dots - Mobile/Tablet only */}
+            <div className="lg:hidden w-full max-w-[980px] mx-auto px-4">
+                <GsapScrollReveal delay={0.6}>
+                    <div className="flex justify-center gap-[6px]">
+                        <div className="w-[24px] h-[4.5px] bg-[#212D39] rounded-full" />
+                        <div className="w-[24px] h-[4.5px] bg-[#F1F2F5] rounded-full" />
+                        <div className="w-[24px] h-[4.5px] bg-[#F1F2F5] rounded-full" />
+                    </div>
+                </GsapScrollReveal>
+            </div>
+
+            {/* Pagination Dots - Desktop */}
+            <div className="hidden lg:block w-full max-w-[980px] mx-auto px-4">
                 <GsapScrollReveal delay={0.6}>
                     <div className="flex justify-center gap-[6px]">
                         <div className="w-[24px] h-[4.5px] bg-[#212D39] rounded-full" />
@@ -111,3 +158,4 @@ const Testimonial: React.FC = () => {
 };
 
 export default Testimonial;
+

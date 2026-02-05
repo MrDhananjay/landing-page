@@ -15,31 +15,35 @@ const Hero: React.FC = () => {
 
     return (
 
-        <div className="relative w-full h-[720px] pt-[80px] flex flex-col items-center justify-center overflow-hidden bg-white">
-            {/* Background Gradients (Abstract) */}
-            {/* Background Gradients (Group 427320765) */}
-            {/* Background Gradients (Group 427320765) */}
-            <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-[606px] pointer-events-none z-0">
-                <img className="w-full h-full object-cover no-repeat" src="/gradient.svg" alt="Gradient" />
-
-                {/* Ellipse 2054 (Left - Orange)
-                <div className="absolute top-[-166px] left-[-10%] w-[50%] h-[360px] bg-[#F4A940] rounded-full blur-[100px] mix-blend-screen opacity-60" />
-
-              
-                <div className="absolute top-[-186px] left-1/2 -translate-x-1/2 w-[50%] h-[389px] bg-[#83FFFF] rounded-full blur-[100px] opacity-60" />
-
-               
-                <div className="absolute top-[-180px] right-[-10%] w-[50%] h-[360px] bg-[#0066FF] rounded-full blur-[100px] opacity-60" /> */}
+        <div className="relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[720px] pt-[70px] md:pt-[80px] flex flex-col items-center justify-center overflow-hidden bg-white">
+            {/* Background Gradients */}
+            {/* Mobile: CSS-based gradient blobs for edge-to-edge coverage */}
+            <div className="md:hidden absolute top-0 left-0 right-0 w-full h-[350px] pointer-events-none z-0">
+                {/* Orange blob - left */}
+                <div className="absolute top-[-80px] left-[-60px] w-[200px] h-[200px] bg-[#F4A940] rounded-full blur-[80px] opacity-90" />
+                {/* Cyan blob - center */}
+                <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[220px] h-[220px] bg-[#83FFFF] rounded-full blur-[80px] opacity-60" />
+                {/* Blue blob - right */}
+                <div className="absolute top-[-80px] right-[-60px] w-[200px] h-[200px] bg-[#0066FF] rounded-full blur-[80px] opacity-70" />
+            </div>
+            {/* Desktop: Original SVG gradient */}
+            <div className="hidden md:block absolute top-0 left-0 right-0 w-full h-[500px] lg:h-[606px] pointer-events-none z-0">
+                <img
+                    className="w-full h-full object-cover"
+                    src="/gradient.svg"
+                    alt="Gradient"
+                />
             </div>
 
 
 
-            <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-4 text-center">
+
+            <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-4 md:px-6 text-center">
                 {/* Tag */}
                 <GsapScrollReveal delay={0.1}>
-                    <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center gap-2 mb-4 md:mb-6">
                         <div className={`w-2.5 h-2.5 rounded-full ${dotColor} transition-colors duration-300`} /> {/* Placeholder icon */}
-                        <div className="text-[#a4adbf] font-poppins font-normal text-sm tracking-wide pr-2">
+                        <div className="text-[#a4adbf] font-poppins font-normal text-xs md:text-sm tracking-wide pr-2">
                             <Typewriter
                                 texts={[
                                     "AI-Powered Hiring",
@@ -62,10 +66,10 @@ const Hero: React.FC = () => {
                 </GsapScrollReveal>
                 {/* Headline */}
                 <GsapScrollReveal delay={0.2}>
-                    <h1 className="text-[48px] font-poppins font-normal text-primary-accent leading-tight mb-6">
+                    <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-poppins font-normal text-primary-accent leading-tight mb-4 md:mb-6">
                         <GsapTextReveal>Automate hiring & </GsapTextReveal>
                         <span className="text-orange-primary">cut </span>
-                        <br />
+                        <br className="hidden sm:block" />
                         <span className="text-orange-primary">time -to-hire</span>
                         <GsapTextReveal> in half</GsapTextReveal>
                     </h1>
@@ -73,7 +77,7 @@ const Hero: React.FC = () => {
 
                 {/* Subhead */}
                 <GsapScrollReveal delay={0.3}>
-                    <p className="text-[#adadad] text-[16px] font-[400] max-w-[472px] mb-10 font-poppins">
+                    <p className="text-[#adadad] text-[14px] md:text-[16px] font-[400] max-w-[90%] md:max-w-[472px] mb-6 md:mb-10 font-poppins">
                         One smart platform that helps recruiters hire faster
                         and job seekers find the right job—without the hassle.
                     </p>
@@ -81,7 +85,7 @@ const Hero: React.FC = () => {
 
                 {/* CTA Button */}
                 <GsapScrollReveal delay={0.4}>
-                    <button className="w-[200px] h-[48px] flex items-center justify-center bg-[#f4a940] rounded-lg text-white font-regular text-[16px] hover:bg-orange-500 transition-colors duration-200">
+                    <button className="w-[160px] md:w-[200px] h-[44px] md:h-[48px] flex items-center justify-center bg-[#f4a940] rounded-lg text-white font-regular text-[14px] md:text-[16px] hover:bg-orange-500 transition-colors duration-200">
                         Book Demo
                     </button>
                 </GsapScrollReveal>

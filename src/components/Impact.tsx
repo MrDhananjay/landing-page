@@ -91,10 +91,10 @@ const Impact: React.FC = () => {
                 `}
             </style>
             {/* Stats Section */}
-            <div className="relative px-[166px] py-[113px]">
-                <div className="relative z-10 w-[980px] mx-auto">
-                    {/* Background Watermark Text - positioned relative to content */}
-                    <div className="absolute inset-0 pointer-events-none select-none overflow-visible -z-10">
+            <div className="relative px-4 md:px-8 lg:px-[166px] py-8 md:py-[80px] lg:py-[113px]">
+                <div className="relative z-10 w-full max-w-[980px] mx-auto">
+                    {/* Background Watermark Text - hidden on mobile */}
+                    <div className="hidden lg:block absolute inset-0 pointer-events-none select-none overflow-visible -z-10">
                         <p className="absolute left-[-246px] top-[-113px] font-['Inter'] font-black text-[238px] leading-[239px] text-[rgba(24,24,27,0.04)] whitespace-nowrap">
                             <GsapTypewriter
                                 text="IMPACT"
@@ -115,50 +115,50 @@ const Impact: React.FC = () => {
                         </p>
                     </div>
                     {/* Header */}
-                    <div className="flex justify-between items-start mb-[63px]">
+                    <div className="flex flex-col md:flex-row justify-between items-start gap-4 md:gap-0 mb-8 md:mb-[63px]">
                         <GsapScrollReveal delay={0.1}>
-                            <h2 className="text-[42px] font-poppins text-[#212D39] leading-[48px] tracking-[-3.35px] w-[287px]">
+                            <h2 className="text-[28px] md:text-[36px] lg:text-[42px] font-poppins text-[#212D39] leading-tight md:leading-[48px] tracking-[-1px] md:tracking-[-3.35px] w-full md:w-[287px]">
                                 Real world<br />impact
                             </h2>
                         </GsapScrollReveal>
                         <GsapScrollReveal delay={0.2}>
-                            <p className="text-[16px] font-poppins text-[#8499BC] w-[336px] leading-normal">
+                            <p className="text-[14px] md:text-[16px] font-poppins text-[#8499BC] w-full md:w-[336px] leading-normal">
                                 Automate your hiring from source to offer. Eliminate manual screening and hire top talent 30% faster with our intelligent AI co-pilot.
                             </p>
                         </GsapScrollReveal>
                     </div>
 
                     {/* Stat Cards */}
-                    <div className="flex gap-[22px]">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-[16px] lg:gap-[22px] justify-center">
                         {/* Card 1: 30% Faster Time-to-Hire */}
                         <GsapScrollReveal delay={0.3}>
-                            <div className="relative w-[310px] h-[288px] bg-[#072251] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(0,0,0,0.5)] cursor-pointer group">
+                            <div className="relative w-full md:w-[220px] lg:w-[310px] h-auto md:h-[260px] lg:h-[288px] bg-[#072251] rounded-[20px] md:rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(0,0,0,0.5)] cursor-pointer group">
                                 {/* Blur effect */}
                                 <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
 
-                                <div className="relative z-10 p-[28px]">
+                                <div className="relative z-10 p-4 md:p-[16px] lg:p-[28px]">
                                     {/* Icon */}
-                                    <div className="w-[45px] h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-[22px]">
+                                    <div className="w-[40px] h-[40px] lg:w-[45px] lg:h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-4 lg:mb-[22px]">
                                         <ClockIcon />
                                     </div>
 
                                     {/* Stat */}
                                     <div className="flex items-end mb-2">
-                                        <span className="text-[56px] font-poppins font-semibold text-white leading-none">30</span>
-                                        <span className="text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-2">%</span>
+                                        <span className="text-[32px] md:text-[40px] lg:text-[56px] font-poppins font-semibold text-white leading-none">30</span>
+                                        <span className="text-[14px] md:text-[16px] lg:text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-1 lg:mb-2">%</span>
                                     </div>
 
                                     {/* Label */}
-                                    <p className="text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-4">
+                                    <p className="text-[10px] lg:text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-3 lg:mb-4">
                                         FASTER TIME-TO-HIRE
                                     </p>
 
                                     {/* Divider */}
-                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
+                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-3 lg:mb-4" />
 
                                     {/* Description */}
-                                    <p className="text-[13px] font-poppins text-[#ADBBD3] leading-[20px]">
-                                        Reduce the time spent on screening and scheduling.
+                                    <p className="text-[11px] lg:text-[13px] font-poppins text-[#ADBBD3] leading-[16px] lg:leading-[20px]">
+                                        Reduce screening and scheduling time.
                                     </p>
                                 </div>
                             </div>
@@ -166,33 +166,33 @@ const Impact: React.FC = () => {
 
                         {/* Card 2: 75% Productivity Boost */}
                         <GsapScrollReveal delay={0.4}>
-                            <div className="relative w-[310px] h-[288px] bg-[#2764E4] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(0,0,0,0.5)] cursor-pointer group">
+                            <div className="relative w-full md:w-[220px] lg:w-[310px] h-auto md:h-[260px] lg:h-[288px] bg-[#2764E4] rounded-[20px] md:rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(0,0,0,0.5)] cursor-pointer group">
                                 {/* Blur effect */}
                                 <div className="absolute w-[171px] h-[172px] right-0 top-[-28px] bg-[#a8cbfe] blur-[35px] opacity-20 rounded-full" />
 
-                                <div className="relative z-10 p-[28px]">
+                                <div className="relative z-10 p-4 md:p-[16px] lg:p-[28px]">
                                     {/* Icon */}
-                                    <div className="w-[45px] h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-[22px]">
+                                    <div className="w-[40px] h-[40px] lg:w-[45px] lg:h-[45px] bg-white/10 rounded-[11px] flex items-center justify-center mb-4 lg:mb-[22px]">
                                         <TrendUpIcon />
                                     </div>
 
                                     {/* Stat */}
                                     <div className="flex items-end mb-2">
-                                        <span className="text-[56px] font-poppins font-semibold text-white leading-none">75</span>
-                                        <span className="text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-2">%</span>
+                                        <span className="text-[32px] md:text-[40px] lg:text-[56px] font-poppins font-semibold text-white leading-none">75</span>
+                                        <span className="text-[14px] md:text-[16px] lg:text-[19px] font-poppins font-semibold text-white/60 ml-1 mb-1 lg:mb-2">%</span>
                                     </div>
 
                                     {/* Label */}
-                                    <p className="text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-4">
+                                    <p className="text-[10px] lg:text-[11px] font-poppins font-semibold text-[#52C5DA] uppercase tracking-[0.5px] mb-3 lg:mb-4">
                                         PRODUCTIVITY BOOST
                                     </p>
 
                                     {/* Divider */}
-                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
+                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-3 lg:mb-4" />
 
                                     {/* Description */}
-                                    <p className="text-[13px] font-poppins text-[#ADBBD3] leading-[20px]">
-                                        Empower your recruiters to focus on what matters: people.
+                                    <p className="text-[11px] lg:text-[13px] font-poppins text-[#ADBBD3] leading-[16px] lg:leading-[20px]">
+                                        Focus on what matters: people.
                                     </p>
                                 </div>
                             </div>
@@ -200,33 +200,33 @@ const Impact: React.FC = () => {
 
                         {/* Card 3: 40% Cost Reduction */}
                         <GsapScrollReveal delay={0.5}>
-                            <div className="relative w-[310px] h-[288px] bg-[#EAF0FB] rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(33,45,57,0.15)] cursor-pointer group">
+                            <div className="relative w-full md:w-[220px] lg:w-[310px] h-auto md:h-[260px] lg:h-[288px] bg-[#EAF0FB] rounded-[20px] md:rounded-[28px] shadow-[0px_17px_35px_-8px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0px_30px_60px_-12px_rgba(33,45,57,0.15)] cursor-pointer group">
                                 {/* Gradient blur effect */}
                                 <div className="absolute w-[200px] h-[200px] right-[-50px] top-[-20px] bg-gradient-to-br from-[#EAF0FB] to-[#D0E1FF] blur-[40px] opacity-80 rounded-full" />
 
-                                <div className="relative z-10 p-[28px]">
+                                <div className="relative z-10 p-4 md:p-[16px] lg:p-[28px]">
                                     {/* Icon */}
-                                    <div className="w-[45px] h-[45px] bg-white rounded-[11px] flex items-center justify-center mb-[22px] shadow-sm">
+                                    <div className="w-[40px] h-[40px] lg:w-[45px] lg:h-[45px] bg-white rounded-[11px] flex items-center justify-center mb-4 lg:mb-[22px] shadow-sm">
                                         <ChartIcon />
                                     </div>
 
                                     {/* Stat */}
                                     <div className="flex items-end mb-2">
-                                        <span className="text-[56px] font-poppins font-semibold text-[#212D39] leading-none">40</span>
-                                        <span className="text-[19px] font-poppins font-semibold text-[#212D39]/60 ml-1 mb-2">%</span>
+                                        <span className="text-[32px] md:text-[40px] lg:text-[56px] font-poppins font-semibold text-[#212D39] leading-none">40</span>
+                                        <span className="text-[14px] md:text-[16px] lg:text-[19px] font-poppins font-semibold text-[#212D39]/60 ml-1 mb-1 lg:mb-2">%</span>
                                     </div>
 
                                     {/* Label */}
-                                    <p className="text-[11px] font-poppins font-semibold text-[#212D39] uppercase tracking-[0.5px] mb-4">
+                                    <p className="text-[10px] lg:text-[11px] font-poppins font-semibold text-[#212D39] uppercase tracking-[0.5px] mb-3 lg:mb-4">
                                         COST REDUCTION
                                     </p>
 
                                     {/* Divider */}
-                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-4" />
+                                    <div className="w-[33px] h-[3px] bg-[#52C5DA] rounded-full mb-3 lg:mb-4" />
 
                                     {/* Description */}
-                                    <p className="text-[13px] font-poppins text-[#8499BC] leading-[20px]">
-                                        Lower your cost-per-hire with automated efficiency.
+                                    <p className="text-[11px] lg:text-[13px] font-poppins text-[#8499BC] leading-[16px] lg:leading-[20px]">
+                                        Lower cost-per-hire with automation.
                                     </p>
                                 </div>
                             </div>
@@ -236,10 +236,10 @@ const Impact: React.FC = () => {
             </div>
 
             {/* Logo Grid Section */}
-            <div className="w-full px-[166px] py-[60px]">
+            <div className="w-full px-4 md:px-8 lg:px-[166px] py-8 md:py-[60px]">
                 <GsapScrollReveal delay={0.6}>
-                    <div className="w-[980px] mx-auto overflow-hidden rounded-xl border border-[#E5E7EB]">
-                        <div className="grid grid-cols-4 bg-white">
+                    <div className="w-full max-w-[980px] mx-auto overflow-hidden rounded-xl border border-[#E5E7EB]">
+                        <div className="grid grid-cols-2 md:grid-cols-4 bg-white">
                             <BrandStrip
                                 brands={[BrandReverland, BrandCopixel, BrandLiva]}
                                 speed="9s"
