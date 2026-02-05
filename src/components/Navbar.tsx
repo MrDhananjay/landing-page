@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
                     <a href="#" className="hover:text-orange-primary transition-colors">About</a>
                     <a href="#" className="hover:text-orange-primary transition-colors">Pricing</a>
                     <a href="#" className="hover:text-orange-primary transition-colors">Contact</a>
-                    <a href="#" className="hover:text-orange-primary transition-colors whitespace-nowrap">Looking for job</a>
+                    <a href="#" className="hover:text-orange-primary transition-colors whitespace-nowrap">Looking for a job?</a>
                 </div>
 
                 {/* Sign In Button - Desktop */}
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                     <a href="#" className="text-[#2b2e34] text-[14px] font-poppins py-2 hover:text-orange-primary transition-colors">About</a>
                     <a href="#" className="text-[#2b2e34] text-[14px] font-poppins py-2 hover:text-orange-primary transition-colors">Pricing</a>
                     <a href="#" className="text-[#2b2e34] text-[14px] font-poppins py-2 hover:text-orange-primary transition-colors">Contact</a>
-                    <a href="#" className="text-[#2b2e34] text-[14px] font-poppins py-2 hover:text-orange-primary transition-colors">Looking for job</a>
+                    <a href="#" className="text-[#2b2e34] text-[14px] font-poppins py-2 hover:text-orange-primary transition-colors">Looking for a job?</a>
                     <button className="w-full bg-[#f4a940] py-3 rounded-[10px] text-white font-medium text-[14px] mt-2 hover:bg-orange-500 transition-colors">
                         Sign In
                     </button>
